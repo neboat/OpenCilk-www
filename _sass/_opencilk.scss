@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Color customizations for OpenCilk
+   ========================================================================== */
+
+/* custom overrides to the theme skin */
+$primary-color: #ab3428 !default;
+$link-color: $primary-color !default;
+$footer-background-color: #499f68 !default; // Matches header overlay color in index.md.
+
+$success-color:  #3b8ea5 !default;
+$warning-color: #dc851f !default;
+$danger-color: #ba3b46 !default;
+$info-color: #826251 !default;
+
+/* syntax highlighting (base16) */
+@import "solarized";
+$base00: $solarizedbase03 !default;
+$base01: $solarizedbase02 !default;
+$base02: $solarizedbase01 !default;
+$base03: $solarizedbase00 !default;
+$base04: $solarizedbase0 !default;
+$base05: $solarizedbase1 !default;
+$base06: $solarizedbase2 !default;
+$base07: $solarizedbase3 !default;
+$base08: $solarizedyellow !default;
+$base09: $solarizedorange !default;
+$base0a: $solarizedgreen !default;
+$base0b: $solarizedmagenta !default;
+$base0c: $solarizedcyan !default;
+$base0d: $solarizedblue !default;
+$base0e: $solarizedviolet !default;
+$base0f: $solarizedred !default;

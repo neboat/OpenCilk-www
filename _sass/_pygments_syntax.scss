@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Pygments syntax highlighting
+   ========================================================================== */
+
+figure.highlight {
+  @include rebase($solarizedbase3,$solarizedbase2,$solarizedbase1,$solarizedbase0,$solarizedbase00,$solarizedbase01,$solarizedbase02,$solarizedbase03)
+  border: 1px solid $solarizedbase0;
+}
+
+.highlight table td {
+  /* line numbers*/
+  &.linenos {
+    padding-right: 1em;
+    width: 1em;
+    // color: $base04;
+    // border-right: 1px solid $base04;
+    border-right: 1px solid;
+    text-align: right;
+  }
+
+  /* code */
+  &.code {
+    padding-left: 1em;
+
+    div.highlight {
+      float: left;
+    }
+  }
+}
+
+.highlight pre {
+    margin: 0;
+}
+
+.highlight {
+  @include rebase($solarizedbase3,$solarizedbase2,$solarizedbase1,$solarizedbase0,$solarizedbase00,$solarizedbase01,$solarizedbase02,$solarizedbase03)
+  .k-Cilk {
+    /* Cilk keyword */
+    color: $base0f;
+  }
+}

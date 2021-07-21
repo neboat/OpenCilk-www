@@ -1,0 +1,200 @@
+@article{SchardlMoLe19,
+author = {Schardl, Tao B. and Moses, William S. and Leiserson, Charles E.},
+title = {Tapir: Embedding Recursive Fork-Join Parallelism into LLVM’s Intermediate Representation},
+year = {2019},
+issue_date = {December 2019},
+OPTpublisher = {Association for Computing Machinery},
+OPTaddress = {New York, NY, USA},
+volume = {6},
+number = {4},
+issn = {2329-4949},
+url = {https://doi.org/10.1145/3365655},
+doi = {10.1145/3365655},
+OPTabstract = {Tapir (pronounced TAY-per) is a compiler intermediate representation (IR) that embeds
+recursive fork-join parallelism, as supported by task-parallel programming platforms
+such as Cilk and OpenMP, into a mainstream compiler’s IR. Mainstream compilers typically
+treat parallel linguistic constructs as syntactic sugar for function calls into a
+parallel runtime. These calls prevent the compiler from performing optimizations on
+and across parallel control constructs. Remedying this situation has generally been
+thought to require an extensive reworking of compiler analyses and code transformations
+to handle parallel semantics. Tapir leverages the “serial-projection property,” which
+is commonly satisfied by task-parallel programs, to handle the semantics of these
+programs without an extensive rework of the compiler.For recursive fork-join programs
+that satisfy the serial-projection property, Tapir enables effective compiler optimization
+of parallel programs with only minor changes to existing compiler analyses and code
+transformations. Tapir uses the serial-projection property to order logically parallel
+fine-grained tasks in the program’s control-flow graph. This ordered representation
+of parallel tasks allows the compiler to optimize parallel codes effectively with
+only minor modifications. For example, to implement Tapir/LLVM, a prototype of Tapir
+in the LLVM compiler, we added or modified less than 3,000 lines of LLVM’s half-million-line
+core middle-end functionality.These changes sufficed to enable LLVM’s existing compiler
+optimizations for serial code—including loop-invariant-code motion, common-subexpression
+elimination, and tail-recursion elimination—to work with parallel control constructs
+such as parallel loops and Cilk’s Cilk_Spawn keyword. Tapir also supports parallel
+optimizations, such as loop scheduling, which restructure the parallel control flow
+of the program. By making use of existing LLVM optimizations and new parallel optimizations,
+Tapir/LLVM can optimize recursive fork-join programs more effectively than traditional
+compilation methods. On a suite of 35 Cilk application benchmarks, Tapir/LLVM produces
+more efficient executables for 30 benchmarks, with faster 18-core running times for
+26 of them, compared to a nearly identical compiler that compiles parallel linguistic
+constructs the traditional way.},
+journal = {ACM Transactions on Parallel Computing},
+month = dec,
+articleno = {19},
+numpages = {33},
+keywords = {optimization, control-flow graph, parallel computing, OpenMP, fork-join parallelism, Tapir, serial-projection property, Cilk, multicore, compiling, LLVM}
+}
+
+@inproceedings{SchardlMoLe17,
+ author = {Schardl, Tao B. and Moses, William S. and Leiserson, Charles E.},
+ title = {Tapir: Embedding Fork-Join Parallelism into LLVM's Intermediate Representation},
+ OPTbooktitle = {Proceedings of the 22Nd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+ OPTseries = {PPoPP '17},
+ booktitle = {PPoPP},
+ year = {2017},
+ isbn = {978-1-4503-4493-7},
+ OPTlocation = {Austin, Texas, USA},
+ pages = {249--265},
+ numpages = {17},
+ url = {http://doi.acm.org/10.1145/3018743.3018758},
+ doi = {10.1145/3018743.3018758},
+ acmid = {3018758},
+ publisher = {ACM},
+ OPTaddress = {New York, NY, USA},
+ keywords = {cilk, compiling, control-flow graph, fork-join parallelism, llvm, multicore, openmp, optimization, par- allel computing, serial semantics, tapir},
+}
+
+@inproceedings{HeLeLe10,
+ author = {He, Yuxiong and Leiserson, Charles E. and Leiserson, William M.},
+ title = {The Cilkview Scalability Analyzer},
+ OPTbooktitle = {Proceedings of the Twenty-second Annual ACM Symposium on Parallelism in Algorithms and Architectures},
+ OPTseries = {SPAA '10},
+ booktitle = {SPAA},
+ year = {2010},
+ isbn = {978-1-4503-0079-7},
+ OPTlocation = {Thira, Santorini, Greece},
+ pages = {145--156},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/1810479.1810509},
+ doi = {10.1145/1810479.1810509},
+ acmid = {1810509},
+ publisher = {ACM},
+ OPTaddress = {New York, NY, USA},
+ keywords = {burdened parallelism, cilk++, cilkview, dag model, multicore programming, multithreading, parallel programming, parallelism, performance, scalability, software tools, span, speedup, work},
+} 
+
+@inproceedings{FengLe97,
+	Author = {Mingdong Feng and Charles E. Leiserson},
+	Booktitle = {SPAA},
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:31 +0000},
+	Day = {22--25},
+	Group = {SuperTech},
+	Localfile = {spbags},
+	Month = {June},
+	Pages = {1--11},
+	Title = {Efficient Detection of Determinacy Races in {Cilk} Programs},
+	Year = 1997}
+
+@article{FengLe99,
+	Author = {Mingdong Feng and Charles E. Leiserson},
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:31 +0000},
+	Journal = {Theory of Computing Systems},
+	Number = 3,
+	Pages = {301--326},
+	Title = {Efficient Detection of Determinacy Races in {Cilk} Programs},
+	Volume = 32,
+	Year = 1999}
+
+@inproceedings{BlumofeLe93,
+	OPTAddress = {San Diego, California},
+	Author = {Robert D. Blumofe and Charles E. Leiserson},
+	Booktitle = {STOC},
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:31 +0000},
+	Day = {16--18},
+	Optbooktitle = stoc25,
+	Optmonth = may,
+	Pages = {362--371},
+	Title = {Space-Efficient Scheduling of Multithreaded Computations},
+	Year = 1993}
+
+@article{BlumofeLe98,
+	Author = {Robert D. Blumofe and Charles E. Leiserson},
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:31 +0000},
+	Group = {SuperTech},
+	Journal = {SIAM Journal on Computing},
+	Month = feb,
+	Number = 1,
+	Pages = {202--229},
+	Title = {Space-Efficient Scheduling of Multithreaded Computations},
+	Volume = 27,
+	Year = 1998}
+
+@inproceedings{BlumofeLe94,
+	Author = {Robert D. Blumofe and Charles E. Leiserson},
+	Booktitle = FOCS,
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:32 +0000},
+	Day = {20--22},
+	Location = {Santa Fe, New Mexico},
+	Month = {November},
+	Pages = {356--368},
+	Title = {Scheduling Multithreaded Computations by Work Stealing},
+	Year = {1994}}
+
+@article{BlumofeLe99,
+	Author = {Robert D. Blumofe and Charles E. Leiserson},
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:31 +0000},
+	Group = {SuperTech},
+	Journal = {Journal of the ACM},
+	Localfile = {steal},
+	Number = 5,
+	Opt_Month = sep,
+	Pages = {720--748},
+	Title = {Scheduling Multithreaded Computations by Work Stealing},
+	Volume = 46,
+	Year = 1999}
+
+@inproceedings{FrigoLeRa98,
+	Author = {Matteo Frigo and Charles E. Leiserson and Keith H. Randall},
+	Booktitle = {PLDI},
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:31 +0000},
+	Opt_Booktitle = {ACM SIGPLAN Conference on Programming Language Design and Implementation},
+	Pages = {212--223},
+	Title = {The Implementation of the {C}ilk-5 Multithreaded Language},
+	Year = {1998}}
+
+@inproceedings{FrigoHaLe09,
+	Author = {Matteo Frigo and Pablo Halpern and Charles E. Leiserson and Stephen Lewin-Berlin},
+	Booktitle = {SPAA},
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:31 +0000},
+	Optbooktitle = {21st Annual ACM Symposium on Parallelism in Algorithms and Architectures},
+	Pages = {79--90},
+	Title = {Reducers and Other {Cilk++} Hyperobjects},
+	Year = 2009}
+
+@inproceedings{SchardlKuLe15,
+	Author = {Schardl, Tao B. and Kuszmaul, Bradley C. and Lee, I-Ting Angelina and Leiserson, William M. and Leiserson, Charles E.},
+	Booktitle = {SPAA},
+	Date-Added = {2017-10-07 22:08:31 +0000},
+	Date-Modified = {2017-10-07 22:08:33 +0000},
+	Opt_Acmid = {2755603},
+	Opt_Address = {New York, NY, USA},
+	Opt_Booktitle = {Proceedings of the 27th ACM on Symposium on Parallelism in Algorithms and Architectures},
+	Opt_Doi = {10.1145/2755573.2755603},
+	Opt_Isbn = {978-1-4503-3588-1},
+	Opt_Keywords = {cilk, cilkprof, compiler instrumentation, llvm, multithreading, parallelism, performance, profiling, scalability, serial bottleneck, span, work},
+	Opt_Location = {Portland, Oregon, USA},
+	Opt_Numpages = {12},
+	Opt_Publisher = {ACM},
+	Opt_Series = {SPAA '15},
+	Opt_Url = {http://doi.acm.org/10.1145/2755573.2755603},
+	Pages = {89--100},
+	Title = {The {Cilkprof} Scalability Profiler},
+	Year = {2015}}

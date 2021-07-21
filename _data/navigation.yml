@@ -1,0 +1,34 @@
+# main links
+main:
+  - title: "Download"
+    url: /download/
+  - title: "Programming in Cilk"
+    url: /programming/
+  - title: "Documentation"
+    url: /documentation/
+  - title: "About us"
+    url: /about/
+  - title: "Publications"
+    url: /publications/
+  - title: "Blog"
+    url: /blog/
+docs:
+  - title: "Programming in Cilk"
+    url: /programming/
+    children:
+      - title: "The Cilk keywords"
+        url: /programming/keywords/
+      - title: "Compiling and running Cilk"
+        url: /programming/compiling/
+      - title: "What is parallelism?"
+        url: /programming/parallelism/
+      - title: "Race-detecting Cilk programs"
+        url: /programming/cilksan/
+      - title: "Measuring parallel scalability"
+        url: /programming/cilkscale/
+      - title: "Reducer hyperobjects"
+        url: /programming/reducers/
+      - title: "Advanced: More on parallel loops"
+        url: /programming/parallelloops/
+      - title: "Advanced: Writing your own reducer"
+        url: /programming/customreducers/
