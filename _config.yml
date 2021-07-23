@@ -34,7 +34,7 @@ markdown: kramdown
 # theme: minima
 # theme: just-the-docs
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: air
+minimal_mistakes_skin: contrast # air
 # breadcrumbs: true
 highlighter: rouge
 plugins:

@@ -4,7 +4,7 @@
 
 figure.highlight {
   @include rebase($solarizedbase3,$solarizedbase2,$solarizedbase1,$solarizedbase0,$solarizedbase00,$solarizedbase01,$solarizedbase02,$solarizedbase03)
-  border: 1px solid $solarizedbase0;
+  border: 1px solid $border-color;
 }
 
 .highlight table td {
